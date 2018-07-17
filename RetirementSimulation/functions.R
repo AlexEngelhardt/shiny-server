@@ -1,17 +1,17 @@
 # debug-values for programming
 
-# input <- list()
-# input$Betrachtungszeitraum <- 30
-# input$n_sim <- 250
-# 
-# input$inflation <- 1.8
-# input$vol_inflation <- 1.5
-# input$net_return <- 6
-# input$vol_return <- 10
-# 
-# input$K0 <- 85
-# input$monthly_savings <- 2000
-# input$monthly_savings_increase <- 3
+## input <- list()
+## input$Betrachtungszeitraum <- 30
+## input$n_sim <- 250
+
+## input$inflation <- 1.8
+## input$vol_inflation <- 1.5
+## input$net_return <- 6
+## input$vol_return <- 10
+
+## input$K0 <- 85
+## input$monthly_savings <- 2000
+## input$monthly_savings_increase <- 3
 
 capital_growth <- function(input){
   n <- input$Betrachtungszeitraum

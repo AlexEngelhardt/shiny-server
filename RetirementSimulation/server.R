@@ -12,8 +12,7 @@ shinyServer(function(input, output) {
   
   output$cap_plot <- renderPlot({
     result <- res()
-    to_plot <- gather(result, value="money", key="year")
-    colnames(to_plot) <- c("year", "n_sim", "money")
+    to_plot <- gather(result, key="n_sim", value="money", -year)
     
     ggplot(to_plot) + geom_line(aes(x=year, y=money, group=n_sim), alpha=0.12) +
       scale_x_continuous("Jahr") +
