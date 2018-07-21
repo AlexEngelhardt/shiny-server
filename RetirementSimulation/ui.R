@@ -26,7 +26,7 @@ shinyUI(pageWithSidebar(
     tags$br(),
     tags$hr(),
     tags$br(),
-    plotOutput("final_hist")	
+    plotOutput("final_hist")
   )
   
 ))

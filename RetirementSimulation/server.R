@@ -16,7 +16,7 @@ shinyServer(function(input, output) {
     
     ggplot(to_plot) + geom_line(aes(x=year, y=money, group=n_sim), alpha=0.12) +
       scale_x_continuous("Jahr") +
-      scale_y_continuous("Vermögen", labels=comma) +
+      scale_y_continuous("Vermögen (in heutigen €)", labels=comma, limits=c(0, NA)) +
       ggtitle("MCMC Simulationen")
   })
   
@@ -25,7 +25,7 @@ shinyServer(function(input, output) {
     final_fortune <- data.frame(fortune=as.numeric(result[input$Betrachtungszeitraum, 1:input$n_sim]))
     
     ggplot(final_fortune) + geom_histogram(aes(x=fortune), bins=30) +
-      scale_x_continuous("Vermögen", labels=comma) +
+      scale_x_continuous("Vermögen (in heutigen €)", labels=comma) +
       scale_y_continuous("Anzahl") + 
       ggtitle("Inflationsbereinigtes Endvermögen")
   })
