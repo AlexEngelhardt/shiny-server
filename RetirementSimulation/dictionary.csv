@@ -1,0 +1,26 @@
+key,English,Deutsch
+
+heading,Capital growth,Kapitalentwicklung
+config_text,Configure the parameters to view interactive MCMC simulations,"Konfigurieren Sie die Parameter, um interaktive MCMC-Simulationen zu erhalten."
+
+years,Plot span in years,Betrachtungszeitraum in Jahren
+n_simulations,Number of simulations,Anzahl der Simulationen
+
+economy,Economy,Wirtschaft
+inflation,Yearly inflation in %,jährl. Inflation in %
+vol_inflation,Volatility of inflation in %,Volatilität der Inflation in %
+net_return,Yearly post-tax return in %,jährl. Nachsteuerrendite in %
+vol_return,Volatility of return in %,Volatilität der Rendite in %
+monthly_savings,Monthly saving amount,monatlicher Sparbetrag
+monthly_savings_increase,Yearly increase of monthly savings amount,jährlicher Anstieg des Sparbetrags in Prozent
+
+saving,Savings,Sparen
+K0,Initial capital in k€,Startkapital in k€
+mcmc_simulations,MCMC Simulations,MCMC Simulationen
+
+final_capital,Inflation-corrected final capital,Inflationsbereinigtes Endvermögen
+year,Year,Jahr
+capital_today,Capital (in today’s €),Vermögen (in heutigen €)
+n,number,Anzahl
+explain_cap_plot,"This plot shows one line per MCMC simulation. For each year, the adapted savings rate gets added, a random inflation and return rate gets simulated and added to the current capital.","Dieser Plot zeigt eine Linie pro MCMC-Simulation. Für jedes Jahr wird die angepasste Sparrate addiert, und zufällig eine Inflationsrate und Rendite simuliert und auf das aktuelle Kapital angewandt."
+explain_final_hist,"A histogram of the final capital of all MCMC simulations","Ein Histogramm des Endkapitals aller MCMC-Simulationen."
