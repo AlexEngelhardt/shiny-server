@@ -1,0 +1,20 @@
+## from,to,amount
+
+## Incomes
+Main job,Gross income,1000
+Side job 1,Side hustles,300
+Side job 2,Side hustles,700
+Side hustles,Gross income,1000
+Investment income,Gross income,100
+
+## Intermediary stages
+Gross income,Income tax (estd.),100
+
+## Expenses
+Gross income,Needs,1000
+Gross income,Wants,100
+Gross income,Savings,1000
+
+## Savings parts
+Savings,ETFs,1000
+Savings,Cash,1000
