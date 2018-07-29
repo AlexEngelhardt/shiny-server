@@ -6,7 +6,7 @@ source("functions.R")
 sample_csv <- paste(readLines("sample_input.csv"), collapse="\n")
 
 shinyServer(function(input, output) {
-
+    
     output$csv_textarea <- renderUI({
         textAreaInput("input_csv",
                       "CSV text of cashflows:",
@@ -26,7 +26,7 @@ shinyServer(function(input, output) {
             type = "sankey",
             orientation = "h",
             height = 600,
-
+            
             node = list(
                 label = nodes$name,
                 color = nodes$color,
@@ -37,20 +37,26 @@ shinyServer(function(input, output) {
                     width = 0.5
                 )
             ),
-
+            
             link = list(
                 source = flows$from_id,
                 target = flows$to_id,
                 value =  flows$amount
             )
         ) %>%
-    layout(
-        title = "Cashflow diagram",
-        font = list(size = 14)
-    )
-
+            layout(
+                title = "Cashflow diagram",
+                font = list(size = 14)
+            )
         p
-
     })
-
+    
+    output$info <- renderUI({
+        tags$p(tags$br(), tags$br(),
+               "This Shiny app plots a Sankey Chart, which plots flows of numeric values",
+               "(e.g. energy or money) across multiple nodes.",
+               tags$br(), tags$br(), "The code is available on ",
+               tags$a("GitHub", href="https://github.com/AlexEngelhardt/shiny-server/tree/master/SankeySavings"),
+               ".")
+    })
 })

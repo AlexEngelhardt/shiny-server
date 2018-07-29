@@ -95,5 +95,21 @@ shinyServer(function(input, output) {
     output$heading <- renderText(tr("heading"))
     output$explain_cap_plot <- renderText(tr("explain_cap_plot"))
     output$explain_final_hist <- renderText(tr("explain_final_hist"))
+    output$info <- renderUI({
+        if(input$language == "German"){
+            tags$p("Dies ist eine Shiny Beispiel-app, die eine Verteilung Ihres ersparten ",
+                   "Vermögens zum Renteneintritt simuliert, gegeben einiger verstellbarer ",
+                   "Parameter (wie z.B. die Sparrate).", tags$br(), tags$br(),
+                   "Der Code ist auf ",
+                   tags$a("GitHub", href="https://github.com/AlexEngelhardt/shiny-server/tree/master/RetirementSimulation"),
+                   "verfügbar")
+        } else if (input$language == "English") {
+            tags$p("This is an example Shiny app that computes a distribution of your ",
+                   "retirement savings given some input parameters, such as your savings rate.",
+                   tags$br(), tags$br(), "The code is available on ",
+                   tags$a("GitHub", href="https://github.com/AlexEngelhardt/shiny-server/tree/master/RetirementSimulation"),
+                   ".")
+        }
+    })
 
 })
